@@ -15,7 +15,7 @@ public class VotingSystem {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Выберите тип голосования:");
-        System.out.println("1. Процедура Нэнсона");
+        System.out.println("1. Процедура Нaнсона");
         System.out.println("2. Процедура Уэйра");
         System.out.println("3. Процедура Болдуина");
         int choice = scanner.nextInt();
@@ -28,10 +28,7 @@ public class VotingSystem {
                 System.out.println("Победитель: " + (winnerNanson != null ? winnerNanson.name : "No winner"));
                 break;
             case 2:
-                List<CandidateWarren> candidates = new ArrayList<>();
-                List<List<String>> voterPreferences = new ArrayList<>();
-                CandidateWarren winner = warrenProcedure(candidates, voterPreferences);
-                System.out.println("Победитель: " + (winner != null ? winner.name : "Нет победителя"));
+                WarrenProcedure.main();
                 break;
             case 3:
                 List<CandidateBaldwin> candidatesBaldwin = new ArrayList<>();

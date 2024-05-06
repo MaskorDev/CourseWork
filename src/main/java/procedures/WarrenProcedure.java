@@ -8,7 +8,7 @@ import java.util.*;
 
 public class WarrenProcedure {
 
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
 
         List<CandidateWarren> candidates = new ArrayList<>();
