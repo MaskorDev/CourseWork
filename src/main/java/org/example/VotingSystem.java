@@ -2,9 +2,7 @@ package org.example;
 
 import java.util.*;
 import candidates.*;
-import procedures.BaldwinProcedure;
-import procedures.NansonProcedure;
-import procedures.WarrenProcedure;
+import procedures.*;
 
 import static procedures.BaldwinProcedure.addCandidatesBaldwin;
 import static procedures.WarrenProcedure.warrenProcedure;
@@ -18,6 +16,8 @@ public class VotingSystem {
         System.out.println("1. Процедура Нaнсона");
         System.out.println("2. Процедура Уэйра");
         System.out.println("3. Процедура Болдуина");
+        System.out.println("4. Процедура Кеммени");
+        System.out.println("5. Процедура Янга");
         int choice = scanner.nextInt();
 
         switch (choice) {
@@ -36,10 +36,14 @@ public class VotingSystem {
                 CandidateBaldwin winnerBaldwin = BaldwinProcedure.baldwinProcedure(candidatesBaldwin);
                 System.out.println("Победитель: " + (winnerBaldwin != null ? winnerBaldwin.name : "No winner"));
                 break;
+            case 4:
+                KemenyProcedure.main();
+                break;
+            case 5:
+                YoungProcedure.main();
+                break;
         }
 
         scanner.close();
     }
-
-
 }
